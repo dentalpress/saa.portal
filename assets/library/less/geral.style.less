@@ -77,7 +77,7 @@ html, body{height: 100%;}
         // define estilo para as informações como nome do segmento e logomarca
         .segmento-group-info{
             height: auto;
-            .boxcenter(30); // alinhar box no centro
+            .boxcenter(40); // alinhar box no centro
 
             // Tamanho do icone
             .glyphicon{ font-size: 100px; } 
@@ -93,10 +93,12 @@ html, body{height: 100%;}
 
         // Define estilo para o menu do segmento
         .segmento-group-menu{
-            .boxcenter(40);
+            .boxcenter(50);
             height: 40%;
 
             .menu-list{
+                width: 100%;
+
                 // remove a configuração de background
                 *{background-color: inherit; display: block;}
                 .list-group-item{
@@ -118,7 +120,7 @@ html, body{height: 100%;}
             }
             // Configura icone down
             .glyphicon{
-                .boxcenter(50);
+                .boxcenter(70);
                 font-size: 50px;
                 color: #FFF;
                 width: 30%;
@@ -139,3 +141,61 @@ html, body{height: 100%;}
         &.cursos-modulares{ background-color: @color-mod}
     }
 }
+
+/////////////////////////////
+//     Estiliza EFECTS     //
+// Efeito de mouse
+#home{
+    // Quando o mouse fora
+    .segmento-group{
+        // define estilo para as informações como nome do segmento e logomarca
+        .segmento-group-info{
+            transition: top 0.5s linear;
+        }
+
+        .segmento-group-menu{
+            transition: top 0.5s linear;
+
+
+            //oculta os menus
+            .menu-list, .glyphicon{display: none;}
+        }
+    }
+
+    // define estilo do menu de segmentos
+    .segmento-group{
+
+            //  Quando o mouse hover
+            &:hover{
+
+                // define estilo para as informações como nome do segmento e logomarca
+                .segmento-group-info{
+                    .boxcenter(25)!important;
+                }
+
+                // Define estilo para o menu do segmento
+                .segmento-group-menu{
+                    .boxcenter(47)!important;
+
+                    // Exibe os menus
+                    .menu-list, .glyphicon{display: inline-block;}
+                    // Esconde botão
+                    .btn-menu{display: none;}
+
+                    .menu-list{
+                        // remove a configuração de background
+                        *{background-color: inherit; display: block;}
+                        .list-group-item{
+
+                    }
+                }
+            }
+        }
+    }
+}
+/*
+
+*/
+
+
+
