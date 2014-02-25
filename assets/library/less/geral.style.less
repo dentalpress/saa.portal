@@ -35,18 +35,21 @@ html, body{ height: 100%}
 header{
     // identifica
     border: 1px solid red;
-    height: 100%; // Define altura
+    height: 100%; // Define altura apatir de body
     width: 100%;  // Define largura
     margin: 0px!important; // remove margin
 
     // define estilo do menu de segmentos
     .segmento-group{
-        margin: 0;
-        padding: 0;
-        width: 20%;
-        height: 100%;
+        .clearboth(); //reseta os left
+        margin: 0; // remove a margin
+        padding: 0; // remove padding
+        width: 20%; // define largura de 20% proporcional a 1/5
+        height: 100%; // altura de 100% apartir do header
 
-
+        .segmento-group-info{
+            height: 50%;
+        }
 
 
 
