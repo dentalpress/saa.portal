@@ -23,9 +23,10 @@
 
     <body>
         <!-- Topo do portal da editora -->
-        <div id="portal-editora">
-            <!-- importar do site via coffe -->
+        <div id="portal-editora" data-pull-portal="header">
+            <!-- importar o header do site via coffe -->
         </div>
+
 
         <!-- Menu das categarias de cursos -->
         <header class="row">
@@ -178,10 +179,12 @@
                     </span>
                 </div>
             </div>
+
         </header>
 
+
         <!-- Conteudo -->
-        <div class="content row">
+        <section class="content row">
 
             <!-- Menu lateral fixo -->
             <nav class="menu-lateral col-md-2">
@@ -231,7 +234,13 @@
                 </div>
             </div>
 
-        </div>
+        </section>
+
+        <!-- Rodapé do portal da editora -->
+        <footer id="portal-editora" data-pull-portal="footer">
+            <!-- importar o footer do site via coffe -->
+        </footer>
+
 
         <!-- jQuerys Plugin -->
         <script src="assets/vendor/jquery/jquery.min.js"></script>
