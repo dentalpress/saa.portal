@@ -1,7 +1,8 @@
 // FUNÇÕES E VARIAVES //
 // Reseta autura de um box que contem elementos flutuantes
 .clearboth {&:after { content: " "; display: block; height: 0; clear: both; font-size: 0; visibility: hidden; }}
-
+// Alinha box no centro
+.boxcenter(@a:50) { @px: (@a - (@a*2)) + 0px; @pc: @a + 0%; margin: 0 auto;  position: relative;  top: @pc;  margin-top: @px;  display: inherit; }
 
 // DEFINE CORES PARA OS SEGMENTOS //
 // Excelencia
@@ -44,7 +45,6 @@ header{
 
     // define estilo do menu de segmentos
     .segmento-group{
-        .clearboth(); //reseta os left
         margin: 0; // remove a margin
         padding: 0; // remove padding
         width: 20%; // define largura de 20% proporcional a 1/5
@@ -53,8 +53,17 @@ header{
 
         // define estilo para as informações como nome do segmento e logomarca
         .segmento-group-info{
-            height: 50%;
-            .glyphicon{  font-size: 100px; } // Tamanho do icone
+            height: auto;
+
+            // Tamanho do icone
+            .glyphicon{
+                font-size: 100px;
+            } 
+            h2{
+                text-transform: uppercase;
+                font-size: 25px;
+                font-weight: normal;
+            }
         }
 
 
