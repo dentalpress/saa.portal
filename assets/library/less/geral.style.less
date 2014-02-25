@@ -7,7 +7,6 @@
 .clearboth {&:after { content: " "; display: block; height: 0; clear: both; font-size: 0; visibility: hidden; }}
 
 
-
 // DEFINE CORES PARA OS SEGMENTOS //
 // Excelencia
 @color-exc: #40ffd3;
@@ -25,4 +24,32 @@
 @color-mod: #ffeb00;
 
 
+// ESTILIZA INDEX //
 
+// Header
+header{
+    // identifica
+    border: 1px solid red;
+
+    // define estilo do menu de segmentos
+    .segmento-group{
+        margin: 0;
+        padding: 0;
+        width: 20%;
+        min-height: 100%;
+
+
+
+
+
+
+
+        // CONFIG SEGMENTOS
+        // Define background
+        &.excelencia{ background-color: @color-exc}
+        &.especializacao{ background-color: @color-esp}
+        &.aperfeicoamento{ background-color: @color-aperf}
+        &.imersao{ background-color: @color-ime}
+        &.cursos-modulares{ background-color: @color-mod}
+    }
+}
