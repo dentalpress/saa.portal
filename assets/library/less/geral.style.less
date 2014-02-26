@@ -95,6 +95,9 @@ html, body{height: 100%; overflow-x: hidden;}
 #home{
     // display: none; //Esconde temporariamente
     border-bottom: 1px solid @color-border;
+    position: absolute;
+    top: 0%;
+    z-index: 99!important;
 
     // define estilo do menu de segmentos
     .segmento-group{
@@ -214,6 +217,33 @@ html, body{height: 100%; overflow-x: hidden;}
 ///////////////////////////////////
 // Estiliza padrão dos conteúdos //
 
+// início de Conteúdo
 #content{
     border: 1px solid red;
+    position: absolute;
+    top: 100%;
+    z-index: 0;
+
+
+    // barra lateal
+    .menu-lateral{
+        position: fixed;
+        top: 10px;
+        height: 100%;
+
+        // Icone para o topo
+        .small-head{
+            width: 100%;
+            height: auto;
+            display: block;
+
+            img{width: 100%;}
+        }
+
+        //  Menu lateral
+        .menu-list{
+            .boxcenter(25);
+        }
+    }
+
 }
