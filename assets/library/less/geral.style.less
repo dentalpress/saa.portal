@@ -279,7 +279,16 @@ html, body{height: 100%; overflow-x: hidden;}
                     margin: 0px;
                     padding: 0 10px;
                     margin-bottom: 25px;
-                    background-color: @color-exc;
+
+                    &:after {
+                        content: "";
+                        border-top: 3px solid @color-exc;
+                        display: inline-block;
+                        width: 69%;
+                        line-height: 8px;
+                        height: 9px;
+                        margin-left: 10px;
+                    }
                 }
 
                 p{
