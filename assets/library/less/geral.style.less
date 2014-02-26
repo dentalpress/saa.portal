@@ -268,9 +268,18 @@ html, body{height: 100%; overflow-x: hidden;}
 
         // Grupo de cada segmento
         .segmento-group{
+            padding-top: 5px;
 
             .segmento-group-sobre{
-                border: 1px solid red;
+                h1{
+                    margin: 0px; // remove margin
+                    font-family: 'Crimson Text', serif; // define font personalizada
+                    font-style: italic;
+                    background-color: @color-exc;
+                    padding: 0 10px;
+                    margin-bottom: 15px;
+                    line-height: inherit;
+                }
             }
         }
     }
