@@ -268,17 +268,25 @@ html, body{height: 100%; overflow-x: hidden;}
 
         // Grupo de cada segmento
         .segmento-group{
-            padding-top: 5px;
+            padding-top: 35px;
 
             .segmento-group-sobre{
                 h1{
-                    margin: 0px; // remove margin
+                    display: block;
                     font-family: 'Crimson Text', serif; // define font personalizada
                     font-style: italic;
-                    background-color: @color-exc;
-                    padding: 0 10px;
-                    margin-bottom: 15px;
                     line-height: inherit;
+                    margin: 0px;
+                    padding: 0 10px;
+                    margin-bottom: 25px;
+                    background-color: @color-exc;
+                }
+
+                p{
+                    display: block;
+                    text-indent: 5px;
+                    padding-left: 16px;
+                    padding-right: 125px;
                 }
             }
         }
