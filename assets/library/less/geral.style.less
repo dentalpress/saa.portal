@@ -229,6 +229,8 @@ html, body{height: 100%; overflow-x: hidden;}
         position: fixed;
         top: 10px;
         height: 100%;
+        border-right: 1px solid @color-border;
+        padding: 0px;
 
         // Icone para o topo
         .small-head{
@@ -241,7 +243,22 @@ html, body{height: 100%; overflow-x: hidden;}
 
         //  Menu lateral
         .menu-list{
-            .boxcenter(25);
+            .boxcenter(20);
+            .list-group-item{
+                padding: 10px 0;
+                text-align: center;
+                margin: -1px;
+
+                // Quando o mouse hover
+                &:hover{background-color: @color-border + 25; } 
+
+                // Quando ativo
+                &.actived{ 
+                    border-right: 1px solid #FFFFFF;
+                    // Quando o mouse encima do ativo
+                    &:hover{background-color: inherit; *{cursor: default;}}
+                } 
+            }
         }
     }
 
