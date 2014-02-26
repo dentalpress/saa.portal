@@ -5,6 +5,9 @@
 .boxcenter(@a:50) { @px: (@a - (@a*2)) + 0px; @pc: @a + 0%; margin: 0 auto;  position: relative;  top: @pc;  margin-top: @px;  display: inherit; }
 
 
+// IMPORTA ANIMATIONS //
+@import "animation.less";
+
 
 // DEFINE CORES PARA OS SEGMENTOS //
 // Excelencia
@@ -128,10 +131,6 @@ html, body{height: 100%;}
             }
         }
 
-
-
-
-
         // CONFIG SEGMENTOS
         // Define background
         &.excelencia{ background-color: @color-exc}
@@ -186,6 +185,8 @@ html, body{height: 100%;}
                         // remove a configuração de background
                         *{background-color: inherit; display: block;}
                         .list-group-item{
+                              .animated();
+                            .flipInX();
 
                     }
                 }
@@ -198,4 +199,24 @@ html, body{height: 100%;}
 */
 
 
+// // ANIMATIONS //
+
+
+// // // // Efeito de mouse
+#home{
+
+    // Quando o mouse fora
+    .segmento-group{
+
+        // define estilo para as informações como nome do segmento e logomarca
+        .segmento-group-info{
+
+            &:hover{
+                .glyphicon{
+
+                }
+            }
+        }
+    }
+}
 
