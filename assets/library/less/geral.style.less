@@ -303,7 +303,23 @@ html, body{height: 100%; overflow-x: hidden;}
 
             // Lista de cursos
             .curso-group{
-                border: 1px solid red;
+                // Titulo de introdução
+                h1{
+                    display: block; 
+                    font-family: 'Crimson Text', serif; 
+                    font-style: italic; 
+                    line-height: inherit; 
+                    margin: 0px; padding: 0 10px; 
+                    margin-bottom: 25px;
+
+                    &:after {
+                        content: "";                         
+                        border-top: 3px solid #40FFD3;
+                        display: inline-block;
+                        width: 100%;
+                        float: left;
+                    }
+                }
             }
         }
 
