@@ -164,59 +164,42 @@ html, body{height: 100%;}
     // define estilo do menu de segmentos
     .segmento-group{
 
-            //  Quando o mouse hover
-            &:hover{
+        //  Quando o mouse hover
+        &:hover{
 
-                // define estilo para as informações como nome do segmento e logomarca
-                .segmento-group-info{
-                    .boxcenter(25)!important;
-                }
+            // define estilo para as informações como nome do segmento e logomarca
+            .segmento-group-info{
+                .boxcenter(25)!important;
+            }
 
-                // Define estilo para o menu do segmento
-                .segmento-group-menu{
-                    .boxcenter(47)!important;
+            // Define estilo para o menu do segmento
+            .segmento-group-menu{
+                .boxcenter(47)!important;
 
-                    // Exibe os menus
-                    .menu-list, .glyphicon{display: inline-block;}
-                    // Esconde botão
-                    .btn-menu{display: none;}
+                // Exibe os menus
+                .menu-list, .glyphicon{display: inline-block;}
+                // Esconde botão
+                .btn-menu{display: none;}
 
-                    .menu-list{
-                        // remove a configuração de background
-                        *{background-color: inherit; display: block;}
-                        .list-group-item{
-                              .animated();
-                            .flipInX();
+                .menu-list{
+                    // remove a configuração de background
+                    *{background-color: inherit; display: block;}
+                    .list-group-item{
+                        .animated();
+                        .flipInX();
 
                     }
+
                 }
-            }
-        }
-    }
-}
-/*
-
-*/
-
-
-// // ANIMATIONS //
-
-
-// // // // Efeito de mouse
-#home{
-
-    // Quando o mouse fora
-    .segmento-group{
-
-        // define estilo para as informações como nome do segmento e logomarca
-        .segmento-group-info{
-
-            &:hover{
                 .glyphicon{
-
+                    .animated.hinge();
+                    .bounce();
+                     -webkit-animation-iteration-count: infinite;
+                     animation-iteration-count: infinite;
                 }
             }
         }
     }
 }
+
 
