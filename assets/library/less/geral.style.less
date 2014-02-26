@@ -9,7 +9,7 @@
 @import "animation.less";
 
 
-// DEFINE CORES PARA OS SEGMENTOS //
+// DEFINE CORES PARADROES //
 // Excelencia
 @color-exc: #40ffd3;
 
@@ -63,11 +63,35 @@ html, body{height: 100%; overflow-x: hidden;}
     margin: 0px!important; // remove margin
 }
 
+
+.menu-list{
+    width: 100%;
+
+    // remove a configuração de background
+    *{background-color: inherit; display: block;}
+    .list-group-item{
+        border-radius: 0; // remove ao arendondado
+        border-left: 0px; // remove borda a esquerda
+        border-right: 0px; // remove borda a diteirta
+        padding: 0px; // remove padding
+
+        // Link do texto
+        a{
+            color: black;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 7px 0;
+        }
+    }
+}
 /////////////////////////////
 // Estiliza padrão da home //
 
 // Header
 #home{
+    // display: none; //Esconde temporariamente
 
     // define estilo do menu de segmentos
     .segmento-group{
@@ -99,27 +123,9 @@ html, body{height: 100%; overflow-x: hidden;}
             .boxcenter(50);
             height: 40%;
 
-            .menu-list{
-                width: 100%;
-
-                // remove a configuração de background
-                *{background-color: inherit; display: block;}
-                .list-group-item{
-                    border-radius: 0; // remove ao arendondado
-                    border-left: 0px; // remove borda a esquerda
-                    border-right: 0px; // remove borda a diteirta
-                    padding: 0px; // remove padding
-
-                    // Link do texto
-                    a{
-                        color: #FFF;
-                        font-size: 12px;
-                        letter-spacing: 0.5px;
-                        text-decoration: none;
-                        text-transform: uppercase;
-                        padding: 7px 0;
-                    }
-                }
+            .menu-list .list-group-item{
+                // Link do texto
+                a{ color: #FFF; }
             }
             // Configura icone down
             .glyphicon{
