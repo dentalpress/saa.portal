@@ -281,15 +281,17 @@ html, body{height: 100%; overflow-x: hidden;}
                     margin: 0px;
                     padding: 0 10px;
                     margin-bottom: 25px;
+                    overflow: hidden;
 
                     &:after {
                         content: "";
                         border-top: 3px solid @color-exc;
                         display: inline-block;
-                        width: 69%;
-                        line-height: 8px;
-                        height: 9px;
-                        margin-left: 10px;
+                        width: 100%;
+                        float: right;
+                        position: relative;
+                        top: -25px;
+                        left: 170px;
                     }
                 }
 
@@ -323,12 +325,20 @@ html, body{height: 100%; overflow-x: hidden;}
 
                 // Curso item
                 .curso-group-item{
+                    .clearboth();
                     width: 100%;
+                    height: auto;
 
                     // Imagem
                     .curso-group-item-imagem{
-                        width: 30%;
-                        img{width: 100%} //  Configura imagem
+                        width: 38%;
+                        overflow: hidden;
+                        margin-right: 3%;
+
+                        img{
+                            width: 100%;
+                            margin: 0 auto;
+                        } //  Configura imagem
 
                         //  Botões
                         .btn-group{
@@ -338,12 +348,17 @@ html, body{height: 100%; overflow-x: hidden;}
 
                     }
 
+                    //  Conteúdo do texto
                     .curso-group-item-text{
+                        height: 100%;
+                        padding-top: 5px;
+
+
                         *{margin: 0; margin-bottom: 5px;}// Define para todos
-                        .titulo{font-size: 14px;}
-                        .data{ font-size: 13px; font-style: italic; color: #BBB; }
-                        .resumo{ font-size: 13px;}
-                        .cordenacao{ font-size: 13px; }
+                        .titulo{font-size: 15px;}
+                        .data{font-size: 14px; font-style: italic; color: @color-border - 30;}
+                        .resumo{font-size: 12px; margin: 8px 0;}
+                        .cordenacao{font-size: 13px; margin-bottom: 0px}
                     }
 
                 }
