@@ -49,12 +49,12 @@
 
                     <!-- Lista de links para curso -->
                     <ul class="menu-list list-group">
-                        <li class="list-group-item"><a href="#exc-sobre">Sobre o Excelência</a></li>
-                        <li class="list-group-item"><a href="#exc-curso">Cursos</a></li>
+                        <li class="list-group-item"><a href="#home/excelencia/sobre">Sobre o Excelência</a></li>
+                        <li class="list-group-item"><a href="#home/excelencia/cursos">Cursos</a></li>
                     </ul>
 
                     <!-- icone navegação -->
-                    <span class="glyphicon glyphicon-chevron-down"></span>
+                    <a href="#home/excelencia/" class="glyphicon glyphicon-chevron-down"></a>
 
                     <!-- Icone de menu oculto -->
                     <span class="btn-menu">
@@ -191,14 +191,14 @@
         <!-- Conteudo -->
         <section class="row page" id="content">
 
-            <!-- Menu lateral fixo -->
+            <!-- Menu lateral fixa -->
             <nav class="menu-lateral col-md-2">
-                <a class="small-head" href="#header">
+                <a class="small-head" href="#home">
                     <img src="http://placehold.it/200x160">
                 </a>
 
                 <ul class="menu-list list-group">
-                    <li class="list-group-item actived"><a href="#exc-curso">Excelência</a></li>
+                    <li class="list-group-item actived"><a href="#home/excelencia/cursos">Excelência</a></li>
                     <li class="list-group-item"><a href="#esp-curso">Especialização</a></li>
                     <li class="list-group-item"><a href="#ape-curso">Aperfeiçoamento</a></li>
                     <li class="list-group-item"><a href="#ime-curso">Imersão</a></li>
@@ -208,16 +208,19 @@
 
             <!-- Conteudo -->
             <div class="col-md-9  col-md-offset-2 cursos-contents">
-                <div class="segmento-group" id="excelencia">
-                    <div class="segmento-group-sobre" id="exc-sobre">
-                        <h1>O Exelência</h1>
+
+                <!-- Segmendo do curso-->
+                <div class="segmento-group excelencia" id="home/excelencia/">
+                    <div class="segmento-group-sobre" id="home/excelencia/sobre">
+                        <h1>O Excelência</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et dui dapibus, ultricies sapien et, aliquam eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque varius, dolor a faucibus sollicitudin, libero massa posuere sapien, non dictum dui neque et justo. Mauris hendrerit sit amet mauris eget euismod. Nulla posuere lobortis orci. Maecenas sit amet blandit neque. Cras et bibendum risus.</p>
                     </div>
 
-                    <div class="curso-group" id="exc-curso">
+                    <!-- Agrupamento de cursos do segmento -->
+                    <div class="curso-group" id="home/excelencia/cursos">
                         <h1>Cursos de Excelência</h1>
 
-                        <div class="curso-group-item media">
+                        <div class="curso-group-item media" id="home/excelencia/cursos/ortodontia">
                             <!-- Imagem lateral -->
                             <div href class="curso-group-item-imagem pull-left">
                                 <img src="http://placehold.it/360x240">
