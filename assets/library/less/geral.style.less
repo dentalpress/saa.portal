@@ -162,10 +162,12 @@ html, body{height: 100%; overflow-x: hidden;}
         // define estilo para as informações como nome do segmento e logomarca
         .segmento-group-info{
             transition: top 0.5s linear;
+            -webkit-transition: top 0.5s linear;
         }
 
         .segmento-group-menu{
             transition: top 0.5s linear;
+            -webkit-transition: top 0.5s linear;
 
 
             //oculta os menus
@@ -247,7 +249,7 @@ html, body{height: 100%; overflow-x: hidden;}
             .list-group-item{
                 padding: 10px 0;
                 text-align: center;
-                margin: -1px;
+                // margin: -1px;
 
                 // Quando o mouse hover
                 &:hover{background-color: @color-border + 25; } 
@@ -269,6 +271,14 @@ html, body{height: 100%; overflow-x: hidden;}
         // Grupo de cada segmento
         .segmento-group{
             padding-top: 35px;
+            margin-bottom: 15%;
+
+            &:after{
+                content: "";
+                display: block;
+                border-top: 1px dashed @color-border;
+                margin-top: 15%;
+            }
 
             .segmento-group-sobre{
                 margin-bottom: 100px;
@@ -328,6 +338,7 @@ html, body{height: 100%; overflow-x: hidden;}
                     .clearboth();
                     width: 100%;
                     height: auto;
+                    margin-bottom: 6%;
 
                     // Imagem
                     .curso-group-item-imagem{
@@ -366,25 +377,25 @@ html, body{height: 100%; overflow-x: hidden;}
 
             // CONFIG SEGMENTOS
             // Define background
-            &#excelencia{
+            &.excelencia{
                 h1:after { border-color: @color-exc} // define cor da barra
                 .segmento-group-sobre h1:after { left: 170px; } // define espaço da barra em segmento-group-sobre
             }
-            &#especializacao{
+            &.especializacao{
                 h1:after { border-color: @color-esp} // define cor da barra
-                .segmento-group-sobre h1:after { left: 170px; } // define espaço da barra em segmento-group-sobre
+                .segmento-group-sobre h1:after { left: 220px; } // define espaço da barra em segmento-group-sobre
              }
-            &#aperfeicoamento{
+            &.aperfeicoamento{
                 h1:after { border-color: @color-aperf} // define cor da barra
-                .segmento-group-sobre h1:after { left: 170px; } // define espaço da barra em segmento-group-sobre
+                .segmento-group-sobre h1:after { left: 260px; } // define espaço da barra em segmento-group-sobre
             }
-            &#imersao{
+            &.imersao{
                 h1:after { border-color: @color-ime} // define cor da barra
-                .segmento-group-sobre h1:after { left: 170px; } // define espaço da barra em segmento-group-sobre
+                .segmento-group-sobre h1:after { left: 150px; } // define espaço da barra em segmento-group-sobre
             }
-            &#cursos-modulares{
+            &.cursos-modulares{
                 h1:after { border-color: @color-mod} // define cor da barra
-                .segmento-group-sobre h1:after { left: 170px; } // define espaço da barra em segmento-group-sobre
+                .segmento-group-sobre h1:after { left: 290px; } // define espaço da barra em segmento-group-sobre
             }
         }
 
