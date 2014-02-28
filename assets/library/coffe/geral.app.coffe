@@ -76,8 +76,10 @@ $("a[href^=#]").on 'click', $("a[href^=#]"), ->
 f_define_posicao '#home' if url.atual is '' # define home quando url for vazia
 f_define_posicao url.hashtag if url.atual != '' # paça posicao atual caso o url seja setado
 
+# ativa função F_define_position quando o hash modificado
 $(window).bind "hashchange", ->
     f_define_posicao window.location.hash
+
 
 
 # console.log $("#content .menu-lateral .menu-list")
