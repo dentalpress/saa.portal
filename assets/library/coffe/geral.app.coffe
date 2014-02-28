@@ -27,6 +27,7 @@ f_define_posicao = (val) ->
     #remove scoll de temp
     delete temp.scroll
 
+#function define url no historico e na barra
 f_define_url = (val) ->
     temp.url = {} # fedino uma array para url
     temp.url.hashtag = val # acrecento a hashtag o val
@@ -34,9 +35,8 @@ f_define_url = (val) ->
     #substituo "-" por "/"
     temp.url.caminho = temp.url.hashtag.replace(/\-/g, '/') + "/"
 
-
-
-    console.log temp.url.caminho
+    # Acrecenta no historico e na url atual a posição solicitada
+    window.history.pushState "", "", temp.url.caminho
 
 
 #Executa quando receber padrão de url
@@ -47,8 +47,6 @@ $("a[href^=#]").on 'click', $("a[href^=#]"), ->
 
     # ativa função
     f_define_posicao temp.href
-
-    # f_define_url temp.href
 
     false
 
