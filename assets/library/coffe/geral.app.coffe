@@ -1,0 +1,121 @@
+console.log 'oi'
+
+temp = {} # define temporario
+
+### FUNCION ###
+# funcion fefine posicao
+f_define_posicao = (val) ->
+
+    temp.scroll = {} # define em temp array scroll
+
+    # define seletor data do destino removendo hashtag
+    temp.scroll.destino = "[data-url-position=" + val.replace('#', '') + "]"
+
+    # valida se foi encontrado algo
+    if $(temp.scroll.destino).length is 1
+
+        # define a posição no topo de destino
+        temp.scroll.posicao = $(temp.scroll.destino).offset().top 
+
+        # movimenta pagina no scroll com a posição passada
+        $("html:not(:animated),body:not(:animated)").animate
+            scrollTop: temp.scroll.posicao - 20
+            , 1000
+
+        f_define_url val
+
+    #remove scoll de temp
+    delete temp.scroll
+
+f_define_url = (val) ->
+    temp.url = {} # fedino uma array para url
+    temp.url.hashtag = val # acrecento a hashtag o val
+
+    #substituo "-" por "/"
+    temp.url.caminho = temp.url.hashtag.replace(/\-/g, '/') + "/"
+
+
+
+    console.log temp.url.caminho
+
+
+#Executa quando receber padrão de url
+$("a[href^=#]").on 'click', $("a[href^=#]"), ->
+
+    # $("a[href^=#]").click ->
+    temp.href = $(this).attr("href") #selecino href
+
+    # ativa função
+    f_define_posicao temp.href
+
+    # f_define_url temp.href
+
+    false
+
+
+
+
+# console.log $("#content .menu-lateral .menu-list")
+
+# # $("a").click ->
+# #   elementClicked = $(this).attr("href")
+# #   destination = $(elementClicked).offset().top
+# #   $("html:not(:animated),body:not(:animated)").animate
+# #     scrollTop: destination - 20
+# #   , 500
+# #   false
+# teste = "teste"
+# teste = "[data-id="+teste+"]"
+# console.log $(teste)
+# temp = {} # define temporario para dados
+
+# reposiciona = (seletor) ->
+#     # temp.destination = seletor
+#     console.log temp
+
+# $("a[href^=#]").click ->
+#     # console.log $(this).attr("href")
+#     temp.href = $(this).attr("href") #selecino href
+#     temp.url = temp.href.replace(/\-/g, '/') #transforma em url
+
+#     temp.scroll = {} # define array
+
+#     # define seletor
+#     temp.scroll.selected = "[data-url-position=" + temp.href.replace('#', '') + "]"
+#     temp.scroll.position = $(temp.scroll.selected).offset().top #define posição do item
+
+#     $("html:not(:animated),body:not(:animated)").animate
+#         scrollTop: temp.scroll.position - 20
+#         , 1000
+
+
+#     window.history.pushState "", "", temp.url
+
+
+#     false
+
+# url = {} # variavel direta para hash
+# url.atual = window.location.hash #  define url atual
+
+# console.log url.atual
+
+# $(window).bind "hashchange", ->
+#   url.new = window.location.hash
+#   url.atual = url.new
+#   console.log url.atual
+
+
+# url = window.location.hash;
+# urlString = url.toString();
+# urlArray = urlString.split("/");
+# $("a[href^=#]").click ->
+#     console.log urlArray
+
+# $(window).bind "click", ->
+#     console.log window.location
+
+# window.onhashchange = ->
+#     console.log 'onhashchange'
+
+# console.log window.location.hash
+
