@@ -1,0 +1,14 @@
+menu = {}
+menu.this = $('.menu-lateral')
+menu.buttom = menu.this.find('.btn-menu')
+menu.menu   = menu.this.find('.menu-list .list-group-item a')
+
+
+menu.menu.click ->
+    menu.this.removeClass('actived')
+
+menu.buttom.click ->
+    if menu.this.hasClass('actived')
+        menu.this.removeClass('actived')
+    else
+        menu.this.addClass('actived')
