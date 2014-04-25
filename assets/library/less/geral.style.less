@@ -155,61 +155,63 @@ html, body{height: 100%; overflow-x: hidden;}
 
 /////////////////////////////
 //     Estiliza EFECTS     //
-// Efeito de mouse
-#home{
-    // Quando o mouse fora
-    .segmento-group{
-        // define estilo para as informações como nome do segmento e logomarca
-        .segmento-group-info{
-            transition: top 0.5s linear;
-            -webkit-transition: top 0.5s linear;
-        }
-
-        .segmento-group-menu{
-            transition: top 0.5s linear;
-            -webkit-transition: top 0.5s linear;
-
-
-            //oculta os menus
-            .menu-list, .glyphicon{display: none;}
-        }
-    }
-
-    // define estilo do menu de segmentos
-    .segmento-group{
-
-        //  Quando o mouse hover
-        &:hover{
-
+// Efeito de mouse até que seja o tamanho mínimo para os efeitos
+@media screen and (min-width: 768px) { //Só será aplicada ao tamanho maior que 768px
+    #home{
+        // Quando o mouse fora
+        .segmento-group{
             // define estilo para as informações como nome do segmento e logomarca
             .segmento-group-info{
-                .boxcenter(25)!important;
+                transition: top 0.5s linear;
+                -webkit-transition: top 0.5s linear;
             }
 
-            // Define estilo para o menu do segmento
             .segmento-group-menu{
-                .boxcenter(47)!important;
+                transition: top 0.5s linear;
+                -webkit-transition: top 0.5s linear;
 
-                // Exibe os menus
-                .menu-list, .glyphicon{display: inline-block;}
-                // Esconde botão
-                .btn-menu{display: none;}
 
-                .menu-list{
-                    // remove a configuração de background
-                    *{background-color: inherit; display: block;}
-                    .list-group-item{
-                        .animated();
-                        .flipInX();
+                //oculta os menus
+                .menu-list, .glyphicon{display: none;}
+            }
+        }
+
+        // define estilo do menu de segmentos
+        .segmento-group{
+
+            //  Quando o mouse hover
+            &:hover{
+
+                // define estilo para as informações como nome do segmento e logomarca
+                .segmento-group-info{
+                    .boxcenter(25)!important;
+                }
+
+                // Define estilo para o menu do segmento
+                .segmento-group-menu{
+                    .boxcenter(47)!important;
+
+                    // Exibe os menus
+                    .menu-list, .glyphicon{display: inline-block;}
+                    // Esconde botão
+                    .btn-menu{display: none;}
+
+                    .menu-list{
+                        // remove a configuração de background
+                        *{background-color: inherit; display: block;}
+                        .list-group-item{
+                            .animated();
+                            .flipInX();
+
+                        }
 
                     }
-
-                }
-                .glyphicon{
-                    .animated.hinge();
-                    .bounce();
-                     -webkit-animation-iteration-count: infinite;
-                     animation-iteration-count: infinite;
+                    .glyphicon{
+                        .animated.hinge();
+                        .bounce();
+                         -webkit-animation-iteration-count: infinite;
+                         animation-iteration-count: infinite;
+                    }
                 }
             }
         }
