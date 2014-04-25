@@ -1,0 +1,192 @@
+// configura para mobile
+@media screen and (min-width: 317px) and (max-width: 768px) {
+    // CONFIG GERAL
+    // quando duas colunas
+    .col-text-2{ .col-text(1,0px); }
+
+
+    // Header
+    #home{
+        min-height: 564px;
+        border: 0px;
+
+        // define estilo do menu de segmentos
+        .segmento-group{
+
+            // define estilo para as informações como nome do segmento e logomarca
+            .segmento-group-abertura {
+                width: 75%;
+                margin: 0 auto;
+
+               img {
+                    width: 100%;
+                    margin-top: 20px;
+                    max-width: 417px;
+                    max-height: 334px;
+                    min-width: 250px;
+                }
+                .inicio {
+                    font-size: 12px;
+                    color: white;
+                }
+            }
+
+            // Define estilo para o menu do segmento
+            .segmento-group-menu{
+                .boxcenter(15);
+                width: 30%;
+                height: 30%;
+
+                .btn-menu{ display: none; }
+
+                .menu-list{ display: none; }
+
+                // Configura icone down
+                .glyphicon{
+                    .boxcenter(50);
+                    .animated.hinge();
+                    .bounce();
+                    -webkit-animation-iteration-count: infinite;
+                    animation-iteration-count: infinite;
+                    font-size: 50px;
+                    color: #FFF;
+                    width: 50%;
+                    cursor: pointer;
+                }
+            }
+
+            // CONFIG SEGMENTOS
+            // Define background
+            &.excelencia-implante{ background-color: @color-exc}
+        }
+    }
+
+    #content{
+
+        // Configura o menu para ficar no topo
+       .menu-lateral {
+            display: inline-block;
+            height: auto;
+            width: 100%;
+            z-index: 2;
+            height: 60px;
+            background-color: black;
+
+            // Icone para o topo
+            .small-head{
+                float: right;
+                height: 47px!important;
+                display: block!important;
+                width: 20%!important;
+                border-left: 1px solid #B1B1B1;
+                margin-top: 5px;
+                text-align: center;
+                text-decoration: none;
+
+               &.small-head:after {
+                    content: "Início";
+                    color:white;
+                    text-transform: uppercase;
+                    padding-top: 15px;
+                    display: block;
+                }
+                img{display: none;}
+
+            } // esconde o icone
+
+            .menu-list {
+                display: none;
+            }
+            // Botão do menu
+            .btn-menu {
+                display: block;
+                width: 20%;
+
+                // icone do botão
+                .icon-bar{
+                    margin: 5px 0;
+                    border-size: 3px;
+                }
+            }
+
+
+
+            // Quando ativo
+            &.actived{
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.93);
+                // Oculta ir para o inicio
+                .small-head{display: none!important;}
+
+                // Configura o botão
+                .btn-menu {
+                    .icon-bar{ display: none; } //Esconde todas as barras
+                    &:after{
+                        content: "x";
+                        color: #FFF;
+                        font-size: 50px;
+                        font-family: verdana;
+                        line-height: 12px;
+                    }
+                }
+
+                //  Exibe a lista do menu e reconfigura
+                .menu-list{
+                    display: inline-block!important;
+                    position: fixed;
+                    top: 92px;
+                    float: left;
+
+                    .list-group-item{
+                        padding: 0 25px;
+                        border:none;
+
+                        a {
+                            color:white;
+                            border-bottom: 1px solid #858585;
+                            padding: 20px 0;
+                            font-size: 19px;
+                        }
+                        &:last-child a { border-bottom:0px; }
+                        &:hover { background-color: initial; }
+                    }
+
+                }
+            }
+
+        }
+
+
+
+        .col-sm-offset-2{padding: 0 8%!important;}
+
+        #abertura {
+            margin-top: 10%;
+            .well.well-lg {
+                padding: 0px;
+                padding-top: 50px;
+                font-size:17px;
+                line-height: 30px;
+                text-align: justify;
+            }
+        }
+
+        #corpo-docente{
+            h4{text-align: center;}
+        }
+
+        #temas-abordados{
+            ol{
+                li {
+                    list-style: none;
+                    text-align: center;
+                    border-bottom: 1px solid #DFDFDF;
+                    padding-bottom: 5px;
+
+                    &:last-child{border-bottom: 0px solid #DFDFDF;}
+                }
+            }
+        }
+    }
+
+}
