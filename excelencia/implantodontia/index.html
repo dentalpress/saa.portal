@@ -42,12 +42,12 @@
         <!-- VENDOR css: Google Fonts - Crimson Text -->
         <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 
-        <!-- LIBRARY less: Estilo geral para cursos // desabled 16/04/2014
+        <!-- LIBRARY less: Estilo geral para cursos -->
         <link rel="stylesheet/less" type="text/css" href="../../assets/library/less/cursos.style.less" />
-        -->
 
-        <!-- LIBRARY css: Estilo geral para cursos -->
+        <!-- LIBRARY css: Estilo geral para cursos // Enable 16/04/2014
         <link rel="stylesheet" type="text/css" href="../../assets/library/css/cursos.style.css" />
+        -->
 
     </head>
 
@@ -58,7 +58,14 @@
             <!-- Link oculto para topo -->
             <span data-url-position="home"></span>
 
-            <div class="segmento-group excelencia-implante col-md-12">
+            <!-- menu do sumario -->
+            <div class="header-sumario text-center">
+                <a href="../ortodontia/" class="before pull-left"><span class="glyphicon glyphicon-chevron-left"></span> Anterior</a>
+                <a href="../../#home/excelencia/cursos/implantodontia" class="back-menu">Ver todos os cursos</a>
+                <a href="../estetica/" class="next pull-right">Proximo <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+
+            <div class="segmento-group excelencia col-md-12">
                 <div class="segmento-group-titulo">Excelência</div>
 
                 <div class="segmento-group-abertura">
@@ -121,6 +128,13 @@
                     <span class="icon-bar"></span>
                 </span>
             </nav>
+
+            <!-- menu do sumario -->
+            <div class="header-sumario text-center">
+                <a href="../ortodontia/" class="before pull-left"><span class="glyphicon glyphicon-chevron-left"></span> Anterior</a>
+                <a href="../../#home/excelencia/cursos/implantodontia" class="back-menu">Ver todos os cursos</a>
+                <a href="../estetica/" class="next pull-right">Proximo <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
 
             <!-- Conteúdo -->
             <div class="curso-contents col-md-offset-2 col-md-9 col-sm-offset-2  col-sm-9 ">
@@ -368,9 +382,8 @@
         <!-- VENDOR js: Coffee-Script - jquery -->
         <script type="text/javascript" src="../../assets/vendor/coffee-script/coffee-script.min.js"></script>
 
-        <!-- VENDOR js: Less - jquery // desabled 16/04/2014
+        <!-- VENDOR js: Less - jquery // desabled 16/04/2014 / Enabled 28/04/2014-->
         <script type="text/javascript" src="../../assets/vendor/less/less.min.js"></script>
-        -->
 
         <!-- LIBRARY coffe: Coffee for Menu Mobile -->
         <script type="text/coffeescript" src="../../assets/library/coffe/menu.app.coffe"></script>
