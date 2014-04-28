@@ -106,6 +106,31 @@ html, body{height: 100%; overflow-x: hidden;}
         }
     }
 }
+
+.header-sumario{
+    width: 100%;
+    display: block;
+    background: #525252;
+    text-align: center;
+
+    a{
+        // border-bottom: 1px solid #FFF;
+        padding: 5px;
+        // background-color: rgba(0, 0, 0, 0.42);
+        display: inline-block;
+        font-family: roboto;
+        text-transform: uppercase;
+        color: white;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        padding: 5px 15px;
+
+        &.before{background-color: rgba(255, 255, 255, 0.08); border-right: 1px solid white;}
+        &.next{background-color: rgba(255, 255, 255, 0.08); border-left: 1px solid white;}
+        &.back-menu{border-bottom: 1px solid white;}
+    }
+}
 /////////////////////////////
 // Estiliza padrão da home //
 
@@ -116,31 +141,6 @@ html, body{height: 100%; overflow-x: hidden;}
     position: absolute;
     top: 0%;
     z-index: 99!important;
-
-    .header{
-        width: 100%;
-        display: block;
-        background: #525252;
-        text-align: center;
-
-        a{
-            // border-bottom: 1px solid #FFF;
-            padding: 5px;
-            // background-color: rgba(0, 0, 0, 0.42);
-            display: inline-block;
-            font-family: roboto;
-            text-transform: uppercase;
-            color: white;
-            font-size: 12px;
-            letter-spacing: 1px;
-            text-decoration: none;
-            padding: 5px 15px;
-
-            &.before{background-color: rgba(255, 255, 255, 0.08); border-right: 1px solid white;}
-            &.next{background-color: rgba(255, 255, 255, 0.08); border-left: 1px solid white;}
-            &.back-menu{border-bottom: 1px solid white;}
-        }
-    }
 
     // define estilo do menu de segmentos
     .segmento-group{
@@ -370,9 +370,21 @@ html, body{height: 100%; overflow-x: hidden;}
         }
     }
 
+    .header-sumario{
+        position: fixed;
+        width: 83.5%;
+        right: 0%;
+        top: 0%;
+        background-color: black;
+        z-index: 10;
+        a{
+            &.back-menu{border-bottom: 0px solid white!important;}
+        }
+    }
     // Galeria de Cursos
     .curso-contents{
         padding-left: 8%;
+        top: 70px;
 
         .segmento-group{
             margin-bottom: 10%;
