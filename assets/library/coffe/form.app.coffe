@@ -5,7 +5,7 @@ $.submt_post = (value) ->
     btn.button('loading');
     $.ajax(
         type: "post"
-        url: "http://192.168.10.106/cursos/excelencia/implantodontia/assets/library/php/submit.php"
+        url: "/curso/assets/library/php/submit.php"
         cache: false
         #dataType: "json"
         data: value
