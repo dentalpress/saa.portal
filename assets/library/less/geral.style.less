@@ -11,19 +11,19 @@
 
 // DEFINE CORES PARADROES //
 // Excelencia
-@color-exc: #74095f;
+@color-exc: #524434;
 
 // Especialização
-@color-esp: #ff6d00;
+@color-esp: #524434;
 
 // Aperfeiçoamento
-@color-aperf: #6abf00;
+@color-aperf: #524434;
 
 // Imersão
-@color-ime: #4B55C0;
+@color-ime: #524434;
 
 // Cursos Modulares
-@color-mod: #1991C9;
+@color-mod: #524434;
 
 // Cor de bordas
 @color-border: #DDD;
@@ -99,6 +99,7 @@ html, body{height: 100%; overflow-x: hidden;}
     top: 0%;
     z-index: 99!important;
 
+
     // define estilo do menu de segmentos
     .segmento-group{
         margin: 0; // remove a margin
@@ -106,6 +107,17 @@ html, body{height: 100%; overflow-x: hidden;}
         width: 20%; // define largura de 20% proporcional a 1/5
         height: 100%; // altura de 100% apartir do header
         text-align: center; // Alinha todos os textos no centro
+        color: white; //Define cor branca para todos os textos
+
+        // Define borda lateral
+        border-left: 2px solid #524434;
+        &.last-child{border-left: none;}
+
+
+        // Define Backgrounds
+        background-color: #2f271e;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
 
         // define estilo para as informações como nome do segmento e logomarca
         .segmento-group-info{
@@ -118,38 +130,49 @@ html, body{height: 100%; overflow-x: hidden;}
             // 
             h2{
                 text-transform: uppercase;
-                font-size: 22px;
+                font-size: 19px;
                 font-weight: normal;
+                font-family: 'Crimson Text', serif; // define font personalizada
+                letter-spacing: 1px;
                 .medium{font-size: 0.7em; display: block; margin-top: -16px;}
             }
         }
 
         // Define estilo para o menu do segmento
         .segmento-group-menu{
-            .boxcenter(50);
+            .boxcenter(60);
             height: 40%;
 
-            .menu-list .list-group-item{
-                // Link do texto
-                a{ color: #FFF; }
+
+            // Configura menus dentro de grupos
+            .menu-list{
+                width: 80%;
+                .list-group-item{
+                    border-color: rgba(255, 255, 255, 0.21);
+                    &:first-child{border-top: 0px}
+                    &:last-child{border-bottom: 0px}
+                    a{ color: #FFF; }
+                }
             }
+
             // Configura icone down
             .glyphicon{
                 .boxcenter(70);
                 font-size: 50px;
-                color: #FFF;
+                color: rgba(255, 255, 255, 0.44);
                 width: 30%;
                 cursor: pointer;
+                text-decoration: none;
             }
         }
 
         // CONFIG SEGMENTOS
         // Define background e cor do texto
-        &.excelencia{ background-color: @color-exc}
-        &.especializacao{ background-color: @color-esp}
-        &.aperfeicoamento{ background-color: @color-aperf}
-        &.imersao{ background-color: @color-ime}
-        &.modulares{ background-color: @color-mod}
+        &.excelencia{      background-image: url(../../../assets/contents/home/backgrounds/excelencia-abertura.jpg)}
+        &.especializacao{  background-image: url(../../../assets/contents/home/backgrounds/especializacao-abertura.jpg)}
+        &.aperfeicoamento{ background-image: url(../../../assets/contents/home/backgrounds/aperfeicoamento-abertura.jpg)}
+        &.imersao{         background-image: url(../../../assets/contents/home/backgrounds/imersao-abertura.jpg)}
+        &.modulares{       background-image: url(../../../assets/contents/home/backgrounds/modulares-abertura.jpg)}
     }
 }
 
@@ -189,7 +212,7 @@ html, body{height: 100%; overflow-x: hidden;}
 
                 // Define estilo para o menu do segmento
                 .segmento-group-menu{
-                    .boxcenter(47)!important;
+                    .boxcenter(54)!important;
 
                     // Exibe os menus
                     .menu-list, .glyphicon{display: inline-block;}
