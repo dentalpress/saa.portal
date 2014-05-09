@@ -70,8 +70,13 @@
         $mail->MsgHTML($body);
         
         $mail->AddReplyTo($post['Email']);
-        $mail->AddAddress('fernando.truculo.evangelista@gmail.com');
-        
+
+        $mail->AddAddress('dental@dentalpress.com.br');
+        $mail->AddAddress('cursos1@dentalpress.com.br');
+        $mail->AddAddress('cursos2@dentalpress.com.br');
+        $mail->AddAddress('cursos3@dentalpress.com.br');
+        $mail->AddAddress('cursos4@dentalpress.com.br');
+        $mail->AddAddress('cursos5@dentalpress.com.br');
 
         if(!$mail->Send()) {
             #não enviado
