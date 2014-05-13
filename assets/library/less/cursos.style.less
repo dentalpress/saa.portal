@@ -28,6 +28,9 @@
 // Cor de bordas
 @color-border: #DDD;
 
+//  Cor padrão
+@color-default: #AF9E59;
+
 // DEFINE PADRAO DAS PAGINAS //
 // Autura 100%
 //Teste
@@ -35,7 +38,7 @@
 
 html, body{height: 100%; overflow-x: hidden;}
 // Define font para textos
- a, b, i, p, span, li, ul, ol, h1, h2, h3, h4, h5, h6 {font-family: 'Roboto', sans-serif;}
+ a, b, i, p, span, li, ul, ol, h1, h2, h3, h4, h5, h6, td, tr {font-family: 'Roboto', sans-serif;}
 
 // Texto em duas colunas
 // Coluna padrao
@@ -381,6 +384,7 @@ html, body{height: 100%; overflow-x: hidden;}
             &.back-menu{border-bottom: 0px solid white!important;}
         }
     }
+
     // Galeria de Cursos
     .curso-contents{
         padding-left: 8%;
@@ -401,7 +405,7 @@ html, body{height: 100%; overflow-x: hidden;}
 
                 &:after {
                     content: "";
-                    border-top: 3px solid @color-exc;
+                    border-top: 3px solid @color-default;
                     display: inline-block;
                     width: 100%;
                     float: right;
@@ -460,6 +464,43 @@ html, body{height: 100%; overflow-x: hidden;}
                 .list-group-item {
                     border: 0px solid #F00; 
                     padding: 15px;
+                }
+            }
+        }
+
+
+        #cronograma{
+            // Configura group
+            .cronograma-group{
+                margin-bottom: 50px;
+
+                // configura tabela do cronograma
+                .cronograma-table{
+                    border-bottom: 2px solid #AF9E59;
+
+                    // configura linhas
+                    tr td{vertical-align: middle;}
+
+                    // Cabecalio da tabela
+                    thead{
+
+                        tr td{text-align: center}
+                        .titulo{
+                            width: 19%;
+                            color: #AF9E59;
+                        }
+                        .titulo{ text-align: left}
+                        .periodo{width: 27%; background-color: #fff; }
+                    }
+
+                    // Configura o corpo
+                    tbody{
+                        tr:first-child td{border-top: none}
+
+                        .titulo{ text-align: right;}
+                        .periodo{border-left: 1px solid #DDD;}
+                    }
+
                 }
             }
         }
