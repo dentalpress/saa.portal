@@ -20,6 +20,14 @@
     if ($post['origem'] != '') {
         include_once('../../../../_assets/php/PHPMailer_v5.1/class.phpmailer.php');
 
+        // padroniza
+        $post['origem'] = utf8_decode($post['origem']);
+        $post['curso']['nome'] = utf8_decode($post['curso']['nome']);
+        $post['Name'] = utf8_decode($post['Name']);
+        $post['Phone'] = utf8_decode($post['Phone']);
+        $post['Email'] = utf8_decode($post['Email']);
+        $post['Msg'] = utf8_decode($post['Msg']);
+
         $body = '
             <html>
                 <meta charset="utf-8" >
