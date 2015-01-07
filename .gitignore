@@ -5,6 +5,7 @@ _src?
 
 # OS generated files #
 ######################
+ftpsync.settings
 .DS_Store
 .DS_Store?
 ._*
